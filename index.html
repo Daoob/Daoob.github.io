@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض أعمالي | Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MyPortfolio</a>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links">
+                <li><a href="#hero">من أنا</a></li>
+                <li><a href="#about">عني</a></li>
+                <li><a href="#projects">مشاريعي</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Who Am I) -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="subtitle">مرحباً، أنا</span>
+                <h1>[اسمك هنا]</h1>
+                <p class="role">مطور واجهات ومصمم تجربة مستخدم</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">تصفح مشاريعي</a>
+                    <a href="#contact" class="btn btn-outline">تواصل معي</a>
+                </div>
+            </div>
+            <!-- Image removed as per request -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">عني</h2>
+            <div class="about-content">
+                <p>أنا شغوف ببناء المواقع الإلكترونية وتطبيقات الويب. أركز على تقديم تجربة مستخدم سلسة وتصميم عصري جذاب.
+                </p>
+                <ul class="skills-list">
+                    <li><i class="fas fa-check"></i> تصميم واجهات (UI/UX)</li>
+                    <li><i class="fas fa-check"></i> تطوير ويب (HTML/CSS/JS)</li>
+                    <li><i class="fas fa-check"></i> إدارة مشاريع</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">مشاريعي</h2>
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be loaded here from script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">تواصل معي</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">يسعدني مناقشة مشروعك القادم!</p>
+            <div class="contact-links">
+                <a href="#" id="whatsapp-link" target="_blank" class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>واتساب</span>
+                </a>
+                <a href="mailto:example@gmail.com" id="email-link" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>البريد الإلكتروني</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; <span id="year"></span></p>
+            <p class="credits">تم الإنشاء بواسطة <a href="https://daoob.online" target="_blank">daoob</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

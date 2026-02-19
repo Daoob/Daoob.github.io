@@ -1,0 +1,431 @@
+/* Global Styles */
+:root {
+    /* Sadu/Heritage Inspired Palette */
+    --primary: #15202B;
+    /* Deep Slate Blue (Background) */
+    --secondary: #1F2F40;
+    /* Lighter Slate (Cards) */
+    --accent: #DAB47B;
+    /* Sadu Beige/Gold (Highlight) */
+    --accent-hover: #C8553D;
+    /* Terracotta (Hover effects) */
+    --text: #FDFBF7;
+    /* Warm Off-white */
+    --text-muted: #94A3B8;
+    --white: #FFFFFF;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --font: 'Tajawal', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Offset for sticky navbar */
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--primary);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(15, 23, 42, 0.95);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-content {
+    flex: 1;
+    width: 100%;
+}
+
+.hero-content .subtitle {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 25px;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.hero-content .role {
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary);
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--text-muted);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent-hover);
+    color: var(--accent-hover);
+}
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.img-placeholder {
+    width: 300px;
+    height: 300px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+/* Section Common */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--white);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    background: var(--secondary);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skills-list i {
+    color: var(--accent);
+    margin-left: 8px;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent);
+}
+
+.project-img {
+    height: 200px;
+    background: #2D3748;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.project-link i {
+    margin-right: 8px;
+    /* For RTL? Margin right pushes icon left of text... wait RTL means icon usually on right of text, so margin-left */
+    /* Wait, for RTL, icon typically needs margin-left if it's visually "after" the text or "before"? */
+    /* Let's check icon position */
+}
+
+/* RTL specific fixes */
+html[dir="rtl"] .project-link i {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+/* Contact Section */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: var(--secondary);
+    padding: 20px 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text);
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-card:hover {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
+}
+
+.footer .credits a {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+        /* Mobile menu to be implemented with JS if needed, for simplicity just stacking */
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    /* Better mobile menu approach for portfolio: simple top list or hamburger */
+    /* For simplicity, let's just make it scrollable or wrapped if needed. */
+    /* Or just show links */
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        transform: translateY(-150%);
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
